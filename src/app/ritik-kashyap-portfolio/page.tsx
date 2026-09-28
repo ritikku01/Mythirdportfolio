@@ -4,22 +4,22 @@ import Projects from "@/components/Projects";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-    title: 'Ritik Kashyap Portfolio | Full Stack AI & Web Developer',
-    description: 'Explore Ritik Kashyap\'s portfolio. Expert in AI, ML, full stack development, Java, and JavaScript. Building scalable web solutions and modern applications.',
+    title: 'Ritik Kashyap Portfolio: Expert AI & Full Stack Developer',
+    description: 'Discover Ritik Kashyap\'s portfolio. Expert in AI, ML, full stack web development, Java, and JavaScript. Building scalable, high-performance digital solutions.',
     alternates: {
         canonical: 'https://my-secondportfolio-so5v.vercel.app/ritik-kashyap-portfolio',
     },
     openGraph: {
-        title: 'Ritik Kashyap Portfolio | Full Stack AI & Web Developer',
-        description: 'Explore Ritik Kashyap\'s portfolio. Expert in AI, ML, full stack development, Java, and JavaScript. Building scalable web solutions and modern applications.',
+        title: 'Ritik Kashyap Portfolio: Expert AI & Full Stack Developer',
+        description: 'Discover Ritik Kashyap\'s portfolio. Expert in AI, ML, full stack web development, Java, and JavaScript. Building scalable, high-performance digital solutions.',
         url: 'https://my-secondportfolio-so5v.vercel.app/ritik-kashyap-portfolio',
         siteName: 'ritik -prof3',
         type: 'website',
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Ritik Kashyap Portfolio | Full Stack AI & Web Developer',
-        description: 'Explore Ritik Kashyap\'s portfolio. Expert in AI, ML, full stack development, Java, and JavaScript.',
+        title: 'Ritik Kashyap Portfolio: Expert AI & Full Stack Developer',
+        description: 'Discover Ritik Kashyap\'s portfolio. Expert in AI, ML, full stack web development, Java, and JavaScript.',
     },
     robots: {
         index: true,
@@ -30,9 +30,11 @@ export const metadata: Metadata = {
 export default function RitikKashyapPortfolioPage() {
     const jsonLd = {
         "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Ritik Kashyap Portfolio",
-        "url": "https://my-secondportfolio-so5v.vercel.app/ritik-kashyap-portfolio"
+        "@type": "Person",
+        "name": "Ritik Kashyap",
+        "jobTitle": "Full Stack AI & Web Developer",
+        "url": "https://my-secondportfolio-so5v.vercel.app/ritik-kashyap-portfolio",
+        "description": "Expert in AI, ML, Java, and JavaScript development."
     };
 
     return (
@@ -43,8 +45,13 @@ export default function RitikKashyapPortfolioPage() {
             />
             <Navbar />
             <h1 className="text-4xl font-bold mb-4">Ritik Kashyap Portfolio</h1>
-            <ScrollyCanvas />
-            <Projects />
+            <section aria-label="Portfolio Overview">
+                <ScrollyCanvas />
+                <Projects />
+            </section>
+            <footer className="mt-10 p-4 text-center">
+                <a href="/contact" className="bg-blue-600 px-6 py-2 rounded text-white font-bold">Hire Ritik for Your Next Project</a>
+            </footer>
         </main>
     );
 }
