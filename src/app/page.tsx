@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <main className="bg-[#121212] min-h-screen text-white">
-      <h1 className="sr-only">Ritik Kashyap - Full Stack Software Developer</h1>
+      <h1 className="sr-only">Ritik Kashyap - Full Stack Software Developer, AI & ML Expert</h1>
       <AnimatePresence mode="wait">
         {isLoading && (
           <Preloader
@@ -38,7 +38,16 @@ export default function Home() {
         onProgress={setProgress}
         onLoaded={() => setProgress(100)}
       />
-      <Projects />
+      <section aria-label="Portfolio Projects">
+        <Projects />
+      </section>
+      <footer className="p-8 text-center text-sm text-gray-500">
+        <p>&copy; {new Date().getFullYear()} Ritik Kashyap. All rights reserved.</p>
+        <nav aria-label="Legal Links">
+            <a href="/privacy" className="mx-2">Privacy Policy</a>
+            <a href="/terms" className="mx-2">Terms of Service</a>
+        </nav>
+      </footer>
     </main>
   );
 }
